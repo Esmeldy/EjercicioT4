@@ -8,9 +8,30 @@ public class SmartWatch extends SmartDevice {
     private String color;
 
 
-    public SmartWatch(String brandName, String modelName, String processor, String memory, String display, String systemName, String watchBand) {
+    public SmartWatch(String brandName, String modelName, String processor, String memory, String display, String systemName, String watchBand, String deviceName, String color) {
         super(brandName, modelName, processor, memory, display, systemName);
         this.watchBand = watchBand;
+        this.deviceName = deviceName;
+        this.color = color;
+    }
+
+    public SmartWatch() {
+    }
+
+    public String getDeviceName() {
+        return deviceName;
+    }
+
+    public void setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getWatchBand() {
@@ -24,8 +45,9 @@ public class SmartWatch extends SmartDevice {
     @Override
     public String deviceDetails() {
         String txt = "";
-        txt = "Nombre del dispositivo: "+deviceName+"\nMarca: "+getBrandName()+"Modelo: "+getModelName()+"\nProcesador: "+getProcessor()+"\nMemoria: "+getMemory()+"" +
-                "\nPantalla: "+getDisplay()+"\nSistema Operativo: "+getSystemName()+"Color de la correa: "+watchBand+"Color: "+color;
+        txt = "\nNombre del dispositivo: "+deviceName+"\nMarca: "+getBrandName()+"Modelo: "+getModelName()+"\nProcesador: "+getProcessor()+"\nMemoria: "+getMemory()+"" +
+                "\nPantalla: "+getDisplay()+"\nSistema Operativo: "+getSystemName()+"" +
+                "\nTipo de correa: "+watchBand+"\nColor: "+color+"\n******************************************************";
         return txt;
     }
 }

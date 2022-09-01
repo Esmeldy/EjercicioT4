@@ -12,6 +12,9 @@ public class Smartphone extends SmartDevice {
         this.deviceName = deviceName;
     }
 
+    public Smartphone() {
+    }
+
     public String getColor() {
         return color;
     }
@@ -31,8 +34,8 @@ public class Smartphone extends SmartDevice {
     @Override
     public String deviceDetails() {
        String txt = "";
-       txt = "Nombre del dispositivo: "+deviceName+"\nMarca: "+getBrandName()+"Modelo: "+getModelName()+"\nProcesador: "+getProcessor()+"\nMemoria: "+getMemory()+"" +
-               "\nPantalla: "+getDisplay()+"\nSistema Operativo: "+getSystemName()+"Color: "+color;
+       txt = "\nNombre del dispositivo: "+deviceName+"\nMarca: "+getBrandName()+"Modelo: "+getModelName()+"\nProcesador: "+getProcessor()+"\nMemoria Interna: "+getMemory()+"" +
+               "\nPantalla: "+getDisplay()+"\nSistema Operativo: "+getSystemName()+"Color: "+color+"\n******************************************************";
         return txt;
     }
 }

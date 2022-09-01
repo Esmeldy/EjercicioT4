@@ -17,6 +17,9 @@ public abstract class SmartDevice {
         this.systemName = systemName;
     }
 
+    public SmartDevice() {
+    }
+
     public String getBrandName() {
         return brandName;
     }
